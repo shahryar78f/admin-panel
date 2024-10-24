@@ -18,7 +18,6 @@ export default function Register() {
     });
   };
 
-  console.log(form);
   return (
     <div className="register-form">
       <div>
