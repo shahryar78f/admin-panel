@@ -22,7 +22,7 @@ export default function Register() {
     <div className="register-form">
       <div>
         <img src={logo} alt="logo" />
-        <h2>فرم ثبت نام</h2>
+        <h2>فرم ورود</h2>
       </div>
       <div>
         <CustomInput
@@ -37,19 +37,12 @@ export default function Register() {
           name="password"
           value={form.password}
           onChange={onChange}
-          placeholder="رمز عبور"
-        />
-        <CustomInput
-          type="password"
-          name="confirmPassword"
-          value={form.confirmPassword}
-          onChange={onChange}
-          placeholder="تتکرار رمز عبور"
+          placeholder="ورود"
         />
       </div>
       <div className="buttom-form">
-        <CutomButtom title="ثبت نام" className="buttom-form_register" />
-        <a href="/login">حساب کاربری دارید؟</a>
+        <CutomButtom title="ورود" className="buttom-form_register" />
+        <a href="/login">ایجاد حساب کاربری!</a>
       </div>
     </div>
   );
