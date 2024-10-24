@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { GoEyeClosed } from "react-icons/go";
+import { RxEyeOpen } from "react-icons/rx";
 
 export default function CustomInput({
   type,
@@ -6,17 +8,29 @@ export default function CustomInput({
   value,
   onChange,
   className,
+  placeholder,
 }) {
+  const [inputType, setInputType] = useState(type || "text");
+
+  const togglePasswordVisibility = () => {
+    setInputType((prevType) => (prevType === "password" ? "text" : "password"));
+  };
+
   return (
-    <input
-      type={type}
-      name={name}
-      value={value}
-      onChange={onChange}
-      className={`input ${className}`}
-    />
+    <div className="input-group">
+      <input
+        type={inputType}
+        name={name}
+        value={value}
+        onChange={onChange}
+        className={`input ${className}`}
+        placeholder={placeholder}
+      />
+      {type === "password" && (
+        <div className="show-password_input" onClick={togglePasswordVisibility}>
+          {inputType === "password" ? <GoEyeClosed /> : <RxEyeOpen />}
+        </div>
+      )}
+    </div>
   );
 }
-
-// background: #F2F2F2;
-// background: #55A3F0;
