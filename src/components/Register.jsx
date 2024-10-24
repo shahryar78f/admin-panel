@@ -41,7 +41,7 @@ export default function Register() {
         toast.error(error.message);
       } else {
         if (res && res.data) {
-          toast.success(res.data.message);
+          toast.success("حساب کاربری ایجاد شد!");
         } else {
           toast.error("پاسخ نامعتبری از سرور دریافت شد.");
         }

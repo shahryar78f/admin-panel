@@ -54,6 +54,7 @@ body {
   background-color: #fff;
   border-radius: 40px;
   margin: 1rem 0;
+  height: fit-content;
 }
 
 .register-form > div {

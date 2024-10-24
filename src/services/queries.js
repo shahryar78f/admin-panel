@@ -8,3 +8,11 @@ export const postUserData = async (data) => {
     return { error };
   }
 };
+export const postLoginUserData = async (data) => {
+  try {
+    const res = await api.post("/auth/login", data);
+    return { res };
+  } catch (error) {
+    return { error };
+  }
+};
