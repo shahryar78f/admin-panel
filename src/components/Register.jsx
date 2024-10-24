@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../assets/logo.webp";
 import CustomInput from "./shared/CustomInput";
 import CutomButtom from "./shared/CutomButtom";
+import { Link } from "react-router-dom";
 export default function Register() {
   const [form, setForm] = useState({
     userName: "",
@@ -49,7 +50,7 @@ export default function Register() {
       </div>
       <div className="buttom-form">
         <CutomButtom title="ثبت نام" className="buttom-form_register" />
-        <a href="/login">حساب کاربری دارید؟</a>
+        <Link to="/login">حساب کاربری دارید؟</Link>
       </div>
     </div>
   );
