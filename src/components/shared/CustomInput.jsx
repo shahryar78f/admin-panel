@@ -3,6 +3,7 @@ import { GoEyeClosed } from "react-icons/go";
 import { RxEyeOpen } from "react-icons/rx";
 
 export default function CustomInput({
+  label,
   type,
   name,
   value,
@@ -18,6 +19,7 @@ export default function CustomInput({
 
   return (
     <div className="input-group">
+      {label && <p>{label}</p>}
       <input
         type={inputType}
         name={name}

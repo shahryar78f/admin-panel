@@ -31,6 +31,15 @@ export const getProducts = async () => {
   }
 };
 
+export const addProducts = async (data) => {
+  return api
+    .post("/products", data)
+    .then((res) => res.data)
+    .catch((error) => {
+      return { error };
+    });
+};
+
 export const deleteProduct = async (productId) => {
   return api
     .delete(`/products/${productId}`)

@@ -131,7 +131,10 @@ body {
   height: 100vh;
 }
 
-.contact-page_details .tableContainer > div {
+.contact-page_details .tableContainer .title-table_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -150,10 +153,28 @@ body {
   cursor: pointer;
 }
 
-.action-container  svg:nth-child(1) {
-  color: green;
+.action-container svg:nth-child(2) {
+  color: red;
 }
 
-.action-container  svg:nth-child(2) {
-  color: red;
+.title-table_container button {
+  color: #fff;
+  background-color: #55a3f0;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-modal {
+  max-width: 460px;
+}
+
+.add-product input {
+  margin: 10px 0;
+}
+
+.titlte-modal {
+  text-align: center;
 }
