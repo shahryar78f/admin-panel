@@ -14,6 +14,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/product/edit/:id" element={<ProductsPage />} />
         </Routes>
         <Toaster />
       </ReactQueryClientProvider>

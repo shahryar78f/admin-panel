@@ -31,6 +31,15 @@ export const getProducts = async () => {
   }
 };
 
+export const getProduct = async (productId) => {
+  return api
+    .get(`products/${productId}`)
+    .then((res) => res.data)
+    .catch((error) => {
+      return error;
+    });
+};
+
 export const addProducts = async (data) => {
   return api
     .post("/products", data)

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { MdEditNote } from "react-icons/md";
+import AddProduct from "./AddProduct";
 import ReusableModal from "../shared/ReusableModal";
-
 
 export default function ProductAction({ productId }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,12 +22,22 @@ export default function ProductAction({ productId }) {
     <div className="action-container">
       <MdEditNote onClick={handleEdit} />
       <FaRegTrashAlt onClick={handleDelete} />
-      <ReusableModal
-        modalType={modalType}
-        isModalOpen={isModalOpen}
-        onCancel={() => setIsModalOpen(false)}
-        productId={productId}
-      />
+      {modalType === "delete" && (
+        <ReusableModal
+          modalType={modalType}
+          isModalOpen={isModalOpen}
+          productId={productId}
+          onCancel={() => setIsModalOpen(false)}
+        />
+      )}
+      {modalType === "edit" && (
+        <AddProduct
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+          productId={productId}
+          modalType={modalType}
+        />
+      )}
     </div>
   );
 }

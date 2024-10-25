@@ -38,7 +38,6 @@ export default function Register() {
       } else {
         if (res && res.data) {
             setTokenCookie(res.data.token)
-          console.log(res.data.token);
           toast.success("با موفقیت وارد شدید!");
         } else {
           toast.error("پاسخ نامعتبری از سرور دریافت شد.");
