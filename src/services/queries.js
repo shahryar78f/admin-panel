@@ -16,3 +16,37 @@ export const postLoginUserData = async (data) => {
     return { error };
   }
 };
+
+export const getProducts = async () => {
+  try {
+    return api
+      .get("/products")
+      .then((res) => res.data)
+      .catch((error) => {
+        console.log("error fetching comment data:", error);
+        return null;
+      });
+  } catch (error) {
+    return { error };
+  }
+};
+
+export const deleteProduct = async (productId) => {
+  return api
+    .delete(`/products/${productId}`)
+    .then((res) => res.data)
+    .catch((error) => {
+      console.log("error delete product, error", error);
+      return { error };
+    });
+};
+
+export const editProduct = async (productId, data) => {
+  return api
+    .put(`/products/${productId}`, data)
+    .then((res) => res.data)
+    .catch((error) => {
+      console.log("error delete product, error", error);
+      return { error };
+    });
+};

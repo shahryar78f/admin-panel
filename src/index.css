@@ -104,3 +104,56 @@ body {
   margin-top: 15px;
   margin-right: 5px;
 }
+
+.productLink {
+  color: #282828;
+  font-weight: 500;
+  transition: all 0.3s ease-in;
+}
+
+.productLink:hover {
+  color: #55a3f0;
+}
+
+.contact-page_details {
+  background-color: red;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-page_details main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-page_details .tableContainer > div {
+  margin-bottom: 15px;
+}
+
+.contact-page_details .tableContainer {
+  border-radius: 1rem;
+  width: 1200px;
+}
+
+.action-container {
+  display: flex;
+  gap: 15px;
+}
+
+.action-container svg {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.action-container  svg:nth-child(1) {
+  color: green;
+}
+
+.action-container  svg:nth-child(2) {
+  color: red;
+}
