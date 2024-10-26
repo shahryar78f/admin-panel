@@ -7,6 +7,7 @@ import { productsDataSourse } from "../constants/tableDataSourse";
 import { useState } from "react";
 import AddProduct from "./module/AddProduct";
 import CutomButtom from "./shared/CutomButtom";
+import ProductsHeader from "./module/ProductsHeader";
 
 export default function Products() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,6 +25,7 @@ export default function Products() {
 
   return (
     <div className="contact-page_details">
+      <ProductsHeader />
       {isLoading ? (
         <main>
           <Loder />
@@ -36,6 +38,7 @@ export default function Products() {
               type="button"
               title="افزودن محصول"
               onClick={handleAdd}
+              className="customButton"
             />
           </div>
           <Table

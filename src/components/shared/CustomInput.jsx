@@ -4,6 +4,7 @@ import { RxEyeOpen } from "react-icons/rx";
 
 export default function CustomInput({
   label,
+  icon,
   type,
   name,
   value,

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { e2p } from "../utils/function";
+import { e2p, sp } from "../utils/function";
 import ProductAction from "../components/module/ProductAction";
 
 export const productsDataSourse = (products) =>
@@ -13,7 +13,7 @@ export const productsDataSourse = (products) =>
     stock: (
       <p>{product.quantity === e2p(0) ? "هیچی" : e2p(product.quantity)}</p>
     ),
-    price: `ريال ${e2p(product.price)}`,
+    price: `${sp(product.price)}  هزار تومان`,
     id: <p>{product.id}</p>,
     action: <ProductAction productId={product.id} />,
   }));

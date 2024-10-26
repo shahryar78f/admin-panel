@@ -116,9 +116,9 @@ body {
 }
 
 .contact-page_details {
-  background-color: red;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -157,7 +157,7 @@ body {
   color: red;
 }
 
-.title-table_container button {
+.customButton {
   color: #fff;
   background-color: #55a3f0;
   font-size: 16px;
@@ -177,4 +177,42 @@ body {
 
 .titlte-modal {
   text-align: center;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin-bottom: 100px;
+  background-color: #fff;
+  margin-top: 50px;
+  border-radius: 16px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 0;
+  margin-right: 5px;
+}
+
+.search-box_container {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  background-color: rgb(72, 104, 180);
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.modelButtom button {
+  font-size: 1rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 10px;
 }
