@@ -46,7 +46,6 @@ export default function ProductsPage() {
       setSelectedProduct(data.data);
     }
   }, [data]);
-  console.log("selectedProduct", selectedProduct);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

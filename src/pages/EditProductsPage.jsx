@@ -1,10 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
 import { getProduct } from "../services/queries";
-import Products from "../components/Products";
 import AddProduct from "../components/module/AddProduct";
 import { useEffect } from "react";
-import ReusableModal from "../components/shared/ReusableModal";
 
 export default function EditProductsPage({ productId, setForm }) {
   const { data, isLoading } = useQuery({
