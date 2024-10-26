@@ -56,7 +56,7 @@ export const deleteProduct = async (productId) => {
     .delete(`/products/${productId}`)
     .then((res) => res.data)
     .catch((error) => {
-    //   console.log("error delete product, error", error);
+      //   console.log("error delete product, error", error);
       return { error };
     });
 };
@@ -66,7 +66,7 @@ export const editProduct = async (productId, data) => {
     .put(`/products/${productId}`, data)
     .then((res) => res.data)
     .catch((error) => {
-    //   console.log("error delete product, error", error);
+      //   console.log("error delete product, error", error);
       return { error };
     });
 };
